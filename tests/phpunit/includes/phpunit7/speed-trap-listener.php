@@ -4,7 +4,7 @@
  * A PHPUnit TestListener that exposes your slowest running tests by outputting
  * results directly to the console.
  */
-class SpeedTrapListener implements PHPUnit_Framework_TestListener {
+class SpeedTrapListener implements PHPUnit\Framework\TestListener {
 
 	/**
 	 * Internal tracking for test suites.
