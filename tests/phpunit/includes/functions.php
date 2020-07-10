@@ -53,7 +53,7 @@ function tests_reset__SERVER() { // phpcs:ignore WordPress.NamingConventions.Val
 function tests_add_filter( $tag, $function_to_add, $priority = 10, $accepted_args = 1 ) {
 	global $wp_filter;
 
-	if ( function_exists( 'add_filter' ) ) {
+	if ( false /*function_exists( 'add_filter' )*/ ) {
 		add_filter( $tag, $function_to_add, $priority, $accepted_args );
 	} else {
 		$idx = _test_filter_build_unique_id( $tag, $function_to_add, $priority );

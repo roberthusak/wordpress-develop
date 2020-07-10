@@ -67,7 +67,7 @@ if ( ! defined( 'WP_TESTS_FORCE_KNOWN_BUGS' ) ) {
  * Cron tries to make an HTTP request to the site, which always fails,
  * because tests are run in CLI mode only.
  */
-define( 'DISABLE_WP_CRON', true );
+//define( 'DISABLE_WP_CRON', true );
 
 define( 'WP_MEMORY_LIMIT', -1 );
 define( 'WP_MAX_MEMORY_LIMIT', -1 );
@@ -97,7 +97,7 @@ if ( file_exists( DIR_TESTDATA . '/themedir1' ) ) {
 }
 
 if ( '1' !== getenv( 'WP_TESTS_SKIP_INSTALL' ) ) {
-	system( WP_PHP_BINARY . ' ' . escapeshellarg( __DIR__ . '/install.php' ) . ' ' . escapeshellarg( $config_file_path ) . ' ' . $multisite, $retval );
+	system( WP_PHP_BINARY . ' ' . /*escapeshellarg(*/ __DIR__ . '/install.php' /*)*/ . ' ' . /*escapeshellarg(*/ $config_file_path /*)*/ . ' ' . $multisite, $retval );
 	if ( 0 !== $retval ) {
 		exit( $retval );
 	}
