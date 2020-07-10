@@ -5,6 +5,8 @@
 class Test_Theme_File extends WP_UnitTestCase {
 
 	public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {
+		$this->markTestSkipped('Peachpie: symlink throw NotSupportedException.');
+
 		if ( ! function_exists( 'symlink' ) ) {
 			self::markTestSkipped( 'symlink() is not available.' );
 		}

@@ -183,6 +183,8 @@ EOT;
 	 * @expectedException PHPUnit_Framework_Error_Deprecated
 	 */
 	function test_json_encode_decode() {
+		$this->markTestSkipped('Peachpie: class-json.php had to be excluded from compilation due to the missing PEAR_Error class.');
+
 		require_once ABSPATH . WPINC . '/class-json.php';
 		$json = new Services_JSON();
 		// Super basic test to verify Services_JSON is intact and working.
