@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+		<RunSettingsFilePath>$(MSBuildProjectDirectory)/tests.runsettings</RunSettingsFilePath>
   </PropertyGroup>
 
   <ItemGroup>
